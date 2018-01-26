@@ -1,0 +1,42 @@
+# Template for translations of protector mod
+# last update: 2016/June/5
+
+#admin.lua
+Remove Protectors near players with names provided (separate names with spaces) = Rimuovi i protettori vicino ai giocatori con i nomi forniti (nomi separati con spazi)
+Protector Names to remove: @1 = Nomi da rimuovere: @1
+Name List Reset = Reset elenco nomi
+
+#doors_chest.lua
+Protected Wooden Door = Porta in legno protetta
+Protected Steel Door = Porta in acciaio protetta
+Protected Trapdoor = Botola protetta
+Protected Steel Trapdoor = Botola d'acciaio protetta
+Protected Chest = Cassa protetta
+@1 moves stuff to protected chest at @2 = @1 sposta le cose nella Cassa protetta a @2
+@1 takes stuff from protected chest at @2 = @1 prende le cose dalla Cassa protetta a @2
+To Chest = Nella Cassa
+To Inventory = Nell'Inventario
+Protected Chest (@1) = Cassa Protetta (@1)
+
+#init.lua
+-- Protector interface -- = 
+PUNCH node to show protected area = COLPISCI il nodo per mostrare l'area protetta
+USE for area check = USA per controllare l'area
+Members: = Membri:
+Close = Chiudi
+This area is owned by @1! = Quest'area è di proprietà di @1!
+This area is owned by @1. = Quest'area è di proprietà @1.
+Protection located at: @1 = Protezione situata a @1
+Members: @1. = Membri: @1.
+This area is not protected. = Quest'area non è protetta.
+You can build here. = Puoi costruire qui.
+Overlaps into above players protected area = Si sovrappone all'area protetta di altri giocatori
+Protection Block = Blocco di protezione
+Protection (owned by @1) = Protezione (posseduto da @1)
+Protection Logo = Logo di protezione
+[MOD] Protector Redo loaded = [MOD] Protector Redo caricato
+
+#pvp.lua
+[Protector] on_punchplayer called with nil objects = [Protector] on_punchplayer called with nil objects
+[Protector] pvp_protect not active, update your version of Minetest = [Protector] pvp_protect not active, update your version of Minetest
+[Protector] pvp_protect is disabled = [Protector] pvp_protect is disabled

@@ -1,0 +1,104 @@
+# Translation by
+
+### api.lua ###
+Digging (by chance) = 
+
+# Template
+### bags.lua ###
+Bags = Borse
+Bag @1 = Borsa @1
+Small Bag = Borsa Piccola
+Medium Bag = Borsa Media
+Large Bag = Borsa Grande
+
+### inernal.lua ###
+First page = Prima pagina
+Back three pages = Indietro di tre pagine
+Back one page = Indietro di una pagina
+Forward one page = Avanti di una pagina
+Forward three pages = Avanti di tre pagine
+Last page = Ultima pagina
+No matching items = Nessun oggetto corrispondente
+Page = pagina
+%s of %s = %s di %s
+Filter = Filtro
+Search = Cerca
+Reset search and display everything = Resetta la ricerca e mostra tutto
+
+### register.lua ###
+Can use the creative inventory = Puoi utilizzare l'inventario creativo
+Forces Unified Inventory to be displayed in Full mode if Lite mode is configured globally = Forza Unified Inventory a visualizzare la modalità completa se la modalità Lite è configurata a livello globale
+Home position set to: %s = Posizione Home impostata su: %s
+Time of day set to 6am = Ora del giorno impostata alle 6 del mattino
+You don't have the settime priviledge! = Non hai il privilegio settime abilitato!
+Time of day set to 9pm = Ora del giorno impostata su 21:00
+This button has been disabled outside of creative mode to prevent accidental inventory trashing.\nUse the trash slot instead. = Questo pulsante è stato disattivato al di fuori della modalità creativa per impedire di cestinare le scorte per errore.\nUsa invece lo slot del cestino.
+Inventory cleared! = Inventario pulito!
+Crafting = 
+Digging = 
+Cooking = 
+Mixing = 
+Trash: = 
+Refill: = 
+Crafting Guide = 
+Method: = 
+Result: %s = 
+crafting = 
+shapeless crafting = 
+cooking = 
+alloy cooking = 
+Copy to craft grid: = Copia nella griglia di crafting:
+All = Tutto
+Alternate = 
+Crafting Grid = griglia di Crafting
+Show next recipe = Mostra la prossima ricetta
+Show next usage = 
+Show previous recipe = Mostra la ricetta precedente
+Show previous usage = 
+# Shown for huge crafting recipes; try to keep the line length short and use multiple line breaks as needed
+This recipe is too\nlarge to be displayed. = 
+# %s = group name (e.g. wool)
+Any item belonging to the %s group = Qualsiasi elemento appartenente al gruppo %s
+# %s = List of “and”-concatenated group names
+Any item belonging to the groups %s = Qualsiasi oggetto appartenente ai gruppi %s
+Recipe %d of %d = Ricetta %d of %d
+Usage %d of %d = 
+No recipes = Nessuna ricetta
+No usages =
+Result = Risultato
+Ingredient = Ingrediente
+Set time to day = Imposta orario a giorno
+Set time to night = Imposta orari a notte
+Set home position = Imposta posizione home
+Go home = Vai a home
+Clear inventory = Cancella inventario
+Give me: =
+To craft grid: =
+
+### group.lua ###
+# Logical connective, example: “Any item belonging to the groups foo and bar”
+\sand\s = 
+
+### waypoints.lua ###
+White = Bianco
+Yellow = Giallo
+Red = Rosso
+Green = Verde
+Blue = Blu
+Waypoints = Waypoints
+Waypoint %d = Waypoint %d
+Waypoint active = Waypoint attivo
+Waypoint inactive = Waypoint inattivo
+World position = Posizione del mondo
+Name = Nome
+HUD text color = Colore testo HUD
+Edit waypoint name = Modifica nome waypoint
+Rename waypoint = Rinomina waypoint
+Change color of waypoint display = Cambia colore del waypoint
+Set waypoint to current location = Imposta il waypoint sulla posizione corrente
+Make waypoint visible = Rendi visibile il waypoint
+Make waypoint invisible = Rendi invisibile il waypoint
+Disable display of waypoint coordinates = Disabilita la visualizzazione delle coordinate del waypoint
+Enable display of waypoint coordinates = Abilita la visualizzazione delle coordinate del waypoint
+Finish editing = Termina la modifica
+Select Waypoint #%d = Seleziona Waypoint #%d

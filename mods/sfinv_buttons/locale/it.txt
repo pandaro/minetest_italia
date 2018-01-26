@@ -1,0 +1,2 @@
+More = Più
+Go = Vai

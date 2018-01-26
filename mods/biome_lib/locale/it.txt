@@ -1,0 +1,5 @@
+# Tradotto da Carl
+
+someone = qualcuno
+Sorry, %s owns that spot. = Spiacente, %s possiede quel posto.
+[Plantlife Library] Loaded = [Plantlife Library] Caricata
