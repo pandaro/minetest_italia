@@ -1,4 +1,4 @@
-Minetest Game [minetest_game]
+MINETEST ITALIA [minetest_italia]
 =============================
 The main subgame for the Minetest Italia
 ========================================
