@@ -21,11 +21,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --mods/default/sounds/player_death.ogg: from OpenArena – GNU GPL v2.
 -----------------------------------------------------------------------------------------------
 local title = "Death Messages"
-local version = "0.1.2"
+local version = "0.2.0"
 local mname = "death_messages"
 -----------------------------------------------------------------------------------------------
 dofile(minetest.get_modpath("death_messages").."/settings.txt")
 -----------------------------------------------------------------------------------------------
+
+--
+-- Intllib support added by Hamlet for CarlBishop's Minetest Italia server
+--
+
+-- Load support for intllib.
+local MP = minetest.get_modpath(minetest.get_current_modname())
+local S, NS = dofile(MP.."/intllib.lua")
+
 
 -- A table of quips for death messages.  The first item in each sub table is the
 -- default message used when RANDOM_MESSAGES is disabled.
@@ -33,131 +42,131 @@ local messages = {}
 
 -- Toxic death messages
 messages.toxic = {
-	" melted into a ball of radioactivity.",
-	" thought chemical waste was cool.",
-	" melted into a jittering pile of flesh.",
-	" couldn't resist that warm glow of toxic water.",
-	" dug straight down.",
-	" went into the toxic curtain.",
-	" thought it was a toxic-tub.",
-	" is radioactive.",
-	" didn't know toxic water was radioactive."
+	S(" melted into a ball of radioactivity."),
+	S(" thought chemical waste was cool."),
+	S(" melted into a jittering pile of flesh."),
+	S(" couldn't resist that warm glow of toxic water."),
+	S(" dug straight down."),
+	S(" went into the toxic curtain."),
+	S(" thought it was a toxic-tub."),
+	S(" is radioactive."),
+	S(" didn't know toxic water was radioactive.")
 }
 
 -- Lava death messages
 messages.lava = {
-	" melted into a ball of fire.",
-	" thought lava was cool.",
-	" melted into a ball of fire.",
-	" couldn't resist that warm glow of lava.",
-	" dug straight down.",
-	" went into the lava curtain.",
-	" thought it was a hottub.",
-	" is melted.",
-	" didn't know lava was hot."
+	S(" melted into a ball of fire."),
+	S(" thought lava was cool."),
+	S(" melted into a ball of fire."),
+	S(" couldn't resist that warm glow of lava."),
+	S(" dug straight down."),
+	S(" went into the lava curtain."),
+	S(" thought it was a hottub."),
+	S(" is melted."),
+	S(" didn't know lava was hot.")
 }
 
 -- Drowning death messages
 messages.water = {
-	" drowned.",
-	" ran out of air.",
-	" failed at swimming lessons.",
-	" tried to impersonate an anchor.",
-	" forgot he wasn't a fish.",
-	" blew one too many bubbles.",
+	S(" drowned."),
+	S(" ran out of air."),
+	S(" failed at swimming lessons."),
+	S(" tried to impersonate an anchor."),
+	S(" forgot he wasn't a fish."),
+	S(" blew one too many bubbles.")
 }
 
 -- Burning death messages
 messages.fire = {
-	" burned to a crisp.",
-	" got a little too warm.",
-	" got too close to the camp fire.",
-	" just got roasted, hotdog style.",
-	" got burned up. More light that way."
+	S(" burned to a crisp."),
+	S(" got a little too warm."),
+	S(" got too close to the camp fire."),
+	S(" just got roasted, hotdog style."),
+	S(" got burned up. More light that way.")
 }
 
 -- Other death messages
 messages.other = {
-	" died.",
-	" did something fatal.",
-	" gave up on life.",
-	" is somewhat dead now.",
-	" passed out -permanently.",
-	" kinda screwed up.",
-	" couldn't fight very well.",
-	" got 0wn3d.",
-	" got SMOKED.",
-	" got hurted by Oerkki.",
-	" got blowed up."
+	S(" died."),
+	S(" did something fatal."),
+	S(" gave up on life."),
+	S(" is somewhat dead now."),
+	S(" passed out -permanently."),
+	S(" kinda screwed up."),
+	S(" couldn't fight very well."),
+	S(" got 0wn3d."),
+	S(" got SMOKED."),
+	S(" got hurted by Oerkki."),
+	S(" got blowed up.")
 }
 
 -- PVP Messages
 messages.pvp = {
-	" fisted",
-	" sliced up",
-	" rekt",
-	" punched",
-	" hacked",
-	" skewered",
-	" blasted",
-	" tickled",
-	" gotten",
-	" sword checked",
-	" turned into a jittering pile of flesh",
-	" buried",
-	" served",
-	" poked",
-	" attacked viciously",
-	" busted up",
-	" schooled",
-	" told",
-	" learned",
-	" chopped up",
-	" deader than ded ded ded",
-	" CHOSEN to be the ONE",
-	" all kinds of messed up",
-	" smoked like a Newport",
-	" hurted",
-	" ballistic-ed",
-	" jostled",
-	" messed-da-frig-up",
-	" lanced",
-	" shot",
-	" knocked da heck out",
-	" pooped on"
+	S(" fisted"),
+	S(" sliced up"),
+	S(" rekt"),
+	S(" punched"),
+	S(" hacked"),
+	S(" skewered"),
+	S(" blasted"),
+	S(" tickled"),
+	S(" gotten"),
+	S(" sword checked"),
+	S(" turned into a jittering pile of flesh"),
+	S(" buried"),
+	S(" served"),
+	S(" poked"),
+	S(" attacked viciously"),
+	S(" busted up"),
+	S(" schooled"),
+	S(" told"),
+	S(" learned"),
+	S(" chopped up"),
+	S(" deader than ded ded ded"),
+	S(" CHOSEN to be the ONE"),
+	S(" all kinds of messed up"),
+	S(" smoked like a Newport"),
+	S(" hurted"),
+	S(" ballistic-ed"),
+	S(" jostled"),
+	S(" messed-da-frig-up"),
+	S(" lanced"),
+	S(" shot"),
+	S(" knocked da heck out"),
+	S(" pooped on")
 }
 
 -- Player Messages
 messages.player = {
-	" for talking smack about thier mother.",
-	" for cheating at Tic-Tac-Toe.",
-	" for being a stinky poop butt.",
-	" for letting Baggins grief.",
-	" because it felt like the right thing to do.",
-	" for spilling milk.",
-	" for wearing a n00b skin.",
-	" for not being good at PVP.",
-	" because they are a n00b.",
-	" for reasons uncertain.",
-	" for using a tablet.",
-	" with the quickness.",
-	" while texting."
+	S(" for talking smack about thier mother."),
+	S(" for cheating at Tic-Tac-Toe."),
+	S(" for being a stinky poop butt."),
+	S(" for letting Baggins grief."),
+	S(" because it felt like the right thing to do."),
+	S(" for spilling milk."),
+	S(" for wearing a n00b skin."),
+	S(" for not being good at PVP."),
+	S(" because they are a n00b."),
+	S(" for reasons uncertain."),
+	S(" for using a tablet."),
+	S(" with the quickness."),
+	S(" while texting.")
 }
 
 -- MOB After Messages
 messages.mobs = {
-	" and was eaten with a gurgling growl.",
-	" then was cooked for dinner.",
-	" then went to the supermarket.",
-	" badly.",
-	" terribly.",
-	" horribly.",
-	" in a haphazard way.",
-	" that sparkles in the twilight with that evil grin.",
-	" and now is covered by blood.",
-	" so swiftly, that not even Chuck Norris could block.",
-	" for talking smack about Oerkkii's mother.",
-	" and grimmaced wryly."
+	S(" and was eaten with a gurgling growl."),
+	S(" then was cooked for dinner."),
+	S(" then went to the supermarket."),
+	S(" badly."),
+	S(" terribly."),
+	S(" horribly."),
+	S(" in a haphazard way."),
+	S(" that sparkles in the twilight with that evil grin."),
+	S(" and now is covered by blood."),
+	S(" so swiftly, that not even Chuck Norris could block."),
+	S(" for talking smack about Oerkkii's mother."),
+	S(" and grimmaced wryly.")
 }
 
 function get_message(mtype)
@@ -184,7 +193,7 @@ minetest.register_on_dieplayer(function(player)
 	local param2 = minetest.dir_to_facedir(player:get_look_dir())
 	local player_name = player:get_player_name()
 	if minetest.is_singleplayer() then
-		player_name = "You"
+		player_name = S("You")
 	end
 	
 	-- Death by lava
@@ -241,7 +250,7 @@ minetest.register_on_dieplayer(function(player)
 	--minetest.chat_send_all(string.char(0x1b).."(c@#000000)".."[DEATH COORDINATES] "..string.char(0x1b).."(c@#ffffff)" .. player_name .. string.char(0x1b).."(c@#000000)".." left a corpse full of diamonds here: " ..
 	--minetest.pos_to_string(pos) .. string.char(0x1b).."(c@#aaaaaa)".." Come and get them!")
 	--player:setpos(death)
-	--minetest.sound_play("pacmine_death", { gain = 0.35})  NOPE!!!
+	--minetest.sound_play("pacmine_death"), { gain = 0.35})  NOPE!!!
 	
 end)
 
@@ -268,11 +277,11 @@ minetest.register_on_punchplayer(function(player, hitter)
 					if holding then  
 					minetest.chat_send_all(
 					string.char(0x1b).."(c@#00CED1)"..player:get_player_name()..
-					string.char(0x1b).."(c@#ff0000)".." was"..
+					string.char(0x1b).."(c@#ff0000)"..S(" was")..
 					string.char(0x1b).."(c@#ff0000)"..get_message("pvp")..
-					string.char(0x1b).."(c@#ff0000)".." by "..
+					string.char(0x1b).."(c@#ff0000)"..S(" by ")..
 					string.char(0x1b).."(c@#00CED1)"..hitter:get_player_name()..
-					string.char(0x1b).."(c@#ffffff)".." with "..
+					string.char(0x1b).."(c@#ffffff)"..S(" with ")..
 					string.char(0x1b).."(c@#FF8C00)"..weap..
 					string.char(0x1b).."(c@#00bbff)"..get_message("player"))  --TODO: make custom mob death messages
 					
@@ -286,9 +295,9 @@ minetest.register_on_punchplayer(function(player, hitter)
 		elseif hitter:get_player_name() == "" and player:get_hp() == 0 then
 					minetest.chat_send_all(
 					string.char(0x1b).."(c@#00CED1)"..player:get_player_name()..
-					string.char(0x1b).."(c@#ff0000)".." was"..
+					string.char(0x1b).."(c@#ff0000)"..S(" was")..
 					string.char(0x1b).."(c@#ff0000)"..get_message("pvp")..
-					string.char(0x1b).."(c@#ff0000)".." by "..
+					string.char(0x1b).."(c@#ff0000)"..S(" by ")..
 					string.char(0x1b).."(c@#FF8C00)"..hitter:get_luaentity().name..  --too many mobs add to crash
 					string.char(0x1b).."(c@#00bbff)"..get_message("mobs"))  --TODO: make custom mob death messages
 					

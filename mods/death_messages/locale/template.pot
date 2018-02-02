@@ -1,0 +1,414 @@
+# DEATH MESSAGES LOCALE FILE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Death Messages package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-30 21:43+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: init.lua
+msgid " melted into a ball of radioactivity."
+msgstr ""
+
+#: init.lua
+msgid " thought chemical waste was cool."
+msgstr ""
+
+#: init.lua
+msgid " melted into a jittering pile of flesh."
+msgstr ""
+
+#: init.lua
+msgid " couldn't resist that warm glow of toxic water."
+msgstr ""
+
+#: init.lua
+msgid " dug straight down."
+msgstr ""
+
+#: init.lua
+msgid " went into the toxic curtain."
+msgstr ""
+
+#: init.lua
+msgid " thought it was a toxic-tub."
+msgstr ""
+
+#: init.lua
+msgid " is radioactive."
+msgstr ""
+
+#: init.lua
+msgid " didn't know toxic water was radioactive."
+msgstr ""
+
+#: init.lua
+msgid " melted into a ball of fire."
+msgstr ""
+
+#: init.lua
+msgid " thought lava was cool."
+msgstr ""
+
+#: init.lua
+msgid " couldn't resist that warm glow of lava."
+msgstr ""
+
+#: init.lua
+msgid " went into the lava curtain."
+msgstr ""
+
+#: init.lua
+msgid " thought it was a hottub."
+msgstr ""
+
+#: init.lua
+msgid " is melted."
+msgstr ""
+
+#: init.lua
+msgid " didn't know lava was hot."
+msgstr ""
+
+#: init.lua
+msgid " drowned."
+msgstr ""
+
+#: init.lua
+msgid " ran out of air."
+msgstr ""
+
+#: init.lua
+msgid " failed at swimming lessons."
+msgstr ""
+
+#: init.lua
+msgid " tried to impersonate an anchor."
+msgstr ""
+
+#: init.lua
+msgid " forgot he wasn't a fish."
+msgstr ""
+
+#: init.lua
+msgid " blew one too many bubbles."
+msgstr ""
+
+#: init.lua
+msgid " burned to a crisp."
+msgstr ""
+
+#: init.lua
+msgid " got a little too warm."
+msgstr ""
+
+#: init.lua
+msgid " got too close to the camp fire."
+msgstr ""
+
+#: init.lua
+msgid " just got roasted, hotdog style."
+msgstr ""
+
+#: init.lua
+msgid " got burned up. More light that way."
+msgstr ""
+
+#: init.lua
+msgid " died."
+msgstr ""
+
+#: init.lua
+msgid " did something fatal."
+msgstr ""
+
+#: init.lua
+msgid " gave up on life."
+msgstr ""
+
+#: init.lua
+msgid " is somewhat dead now."
+msgstr ""
+
+#: init.lua
+msgid " passed out -permanently."
+msgstr ""
+
+#: init.lua
+msgid " kinda screwed up."
+msgstr ""
+
+#: init.lua
+msgid " couldn't fight very well."
+msgstr ""
+
+#: init.lua
+msgid " got 0wn3d."
+msgstr ""
+
+#: init.lua
+msgid " got SMOKED."
+msgstr ""
+
+#: init.lua
+msgid " got hurted by Oerkki."
+msgstr ""
+
+#: init.lua
+msgid " got blowed up."
+msgstr ""
+
+#: init.lua
+msgid " fisted"
+msgstr ""
+
+#: init.lua
+msgid " sliced up"
+msgstr ""
+
+#: init.lua
+msgid " rekt"
+msgstr ""
+
+#: init.lua
+msgid " punched"
+msgstr ""
+
+#: init.lua
+msgid " hacked"
+msgstr ""
+
+#: init.lua
+msgid " skewered"
+msgstr ""
+
+#: init.lua
+msgid " blasted"
+msgstr ""
+
+#: init.lua
+msgid " tickled"
+msgstr ""
+
+#: init.lua
+msgid " gotten"
+msgstr ""
+
+#: init.lua
+msgid " sword checked"
+msgstr ""
+
+#: init.lua
+msgid " turned into a jittering pile of flesh"
+msgstr ""
+
+#: init.lua
+msgid " buried"
+msgstr ""
+
+#: init.lua
+msgid " served"
+msgstr ""
+
+#: init.lua
+msgid " poked"
+msgstr ""
+
+#: init.lua
+msgid " attacked viciously"
+msgstr ""
+
+#: init.lua
+msgid " busted up"
+msgstr ""
+
+#: init.lua
+msgid " schooled"
+msgstr ""
+
+#: init.lua
+msgid " told"
+msgstr ""
+
+#: init.lua
+msgid " learned"
+msgstr ""
+
+#: init.lua
+msgid " chopped up"
+msgstr ""
+
+#: init.lua
+msgid " deader than ded ded ded"
+msgstr ""
+
+#: init.lua
+msgid " CHOSEN to be the ONE"
+msgstr ""
+
+#: init.lua
+msgid " all kinds of messed up"
+msgstr ""
+
+#: init.lua
+msgid " smoked like a Newport"
+msgstr ""
+
+#: init.lua
+msgid " hurted"
+msgstr ""
+
+#: init.lua
+msgid " ballistic-ed"
+msgstr ""
+
+#: init.lua
+msgid " jostled"
+msgstr ""
+
+#: init.lua
+msgid " messed-da-frig-up"
+msgstr ""
+
+#: init.lua
+msgid " lanced"
+msgstr ""
+
+#: init.lua
+msgid " shot"
+msgstr ""
+
+#: init.lua
+msgid " knocked da heck out"
+msgstr ""
+
+#: init.lua
+msgid " pooped on"
+msgstr ""
+
+#: init.lua
+msgid " for talking smack about thier mother."
+msgstr ""
+
+#: init.lua
+msgid " for cheating at Tic-Tac-Toe."
+msgstr ""
+
+#: init.lua
+msgid " for being a stinky poop butt."
+msgstr ""
+
+#: init.lua
+msgid " for letting Baggins grief."
+msgstr ""
+
+#: init.lua
+msgid " because it felt like the right thing to do."
+msgstr ""
+
+#: init.lua
+msgid " for spilling milk."
+msgstr ""
+
+#: init.lua
+msgid " for wearing a n00b skin."
+msgstr ""
+
+#: init.lua
+msgid " for not being good at PVP."
+msgstr ""
+
+#: init.lua
+msgid " because they are a n00b."
+msgstr ""
+
+#: init.lua
+msgid " for reasons uncertain."
+msgstr ""
+
+#: init.lua
+msgid " for using a tablet."
+msgstr ""
+
+#: init.lua
+msgid " with the quickness."
+msgstr ""
+
+#: init.lua
+msgid " and was eaten with a gurgling growl."
+msgstr ""
+
+#: init.lua
+msgid " then was cooked for dinner."
+msgstr ""
+
+#: init.lua
+msgid " then went to the supermarket."
+msgstr ""
+
+#: init.lua
+msgid " badly."
+msgstr ""
+
+#: init.lua
+msgid " terribly."
+msgstr ""
+
+#: init.lua
+msgid " horribly."
+msgstr ""
+
+#: init.lua
+msgid " in a haphazard way."
+msgstr ""
+
+#: init.lua
+msgid " that sparkles in the twilight with that evil grin."
+msgstr ""
+
+#: init.lua
+msgid " and now is covered by blood."
+msgstr ""
+
+#: init.lua
+msgid " so swiftly, that not even Chuck Norris could block."
+msgstr ""
+
+#: init.lua
+msgid " for talking smack about Oerkkii's mother."
+msgstr ""
+
+#: init.lua
+msgid " and grimmaced wryly."
+msgstr ""
+
+#: init.lua
+msgid "You"
+msgstr ""
+
+#: init.lua
+msgid " while texting."
+msgstr ""
+
+#: init.lua
+msgid " was"
+msgstr ""
+
+#: init.lua
+msgid " by "
+msgstr ""
+
+#: init.lua
+msgid " with "
+msgstr ""
