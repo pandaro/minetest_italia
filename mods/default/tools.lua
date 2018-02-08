@@ -53,6 +53,18 @@ minetest.register_tool("default:pick_stone", {
 minetest.register_tool("default:pick_steel", {
 	description = "Steel Pickaxe",
 	inventory_image = "default_tool_steelpick.png",
+	palette='m.png',
+	_rpg = true,
+	on_place = function(itemstack, placer, pointed_thing)
+		print('on_placestart')
+		rpg_tool:tool_set(itemstack,placer)
+		return itemstack
+	end,
+	on_secondary_use = function(itemstack, user, pointed_thing)
+		print('on_placestart')
+		rpg_tool:tool_set(itemstack,user)
+		return itemstack
+	end,
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
@@ -67,8 +79,19 @@ minetest.register_tool("default:pick_steel", {
 minetest.register_tool("default:pick_bronze", {
 	description = "Bronze Pickaxe",
 	inventory_image = "default_tool_bronzepick.png",
-	tool_capabilities = {
-		full_punch_interval = 1.0,
+	palette='m.png',
+	_rpg = true,
+	on_place = function(itemstack, placer, pointed_thing)
+		print('on_placestart')
+		rpg_tool:tool_set(itemstack,placer)
+		return itemstack
+	end,
+	on_secondary_use = function(itemstack, user, pointed_thing)
+		print('on_placestart')
+		rpg_tool:tool_set(itemstack,user)
+		return itemstack
+	end,	tool_capabilities = {
+	full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
 			cracky = {times={[1]=4.00, [2]=1.60, [3]=0.80}, uses=30, maxlevel=2},
@@ -81,6 +104,18 @@ minetest.register_tool("default:pick_bronze", {
 minetest.register_tool("default:pick_mese", {
 	description = "Mese Pickaxe",
 	inventory_image = "default_tool_mesepick.png",
+	palette='m.png',
+	_rpg = true,
+	on_place = function(itemstack, placer, pointed_thing)
+		print('on_placestart')
+		rpg_tool:tool_set(itemstack,placer)
+		return itemstack
+	end,
+	on_secondary_use = function(itemstack, user, pointed_thing)
+		print('on_placestart')
+		rpg_tool:tool_set(itemstack,user)
+		return itemstack
+	end,
 	tool_capabilities = {
 		full_punch_interval = 0.9,
 		max_drop_level=3,
@@ -95,6 +130,18 @@ minetest.register_tool("default:pick_mese", {
 minetest.register_tool("default:pick_diamond", {
 	description = "Diamond Pickaxe",
 	inventory_image = "default_tool_diamondpick.png",
+	palette='m.png',
+	_rpg = true,
+	on_place = function(itemstack, placer, pointed_thing)
+		print('on_placestart')
+		rpg_tool:tool_set(itemstack,placer)
+		return itemstack
+	end,
+	on_secondary_use = function(itemstack, user, pointed_thing)
+		print('on_placestart')
+		rpg_tool:tool_set(itemstack,user)
+		return itemstack
+	end,
 	tool_capabilities = {
 		full_punch_interval = 0.9,
 		max_drop_level=3,
@@ -145,6 +192,18 @@ minetest.register_tool("default:shovel_steel", {
 	description = "Steel Shovel",
 	inventory_image = "default_tool_steelshovel.png",
 	wield_image = "default_tool_steelshovel.png^[transformR90",
+	palette='m.png',
+	_rpg = true,
+	on_place = function(itemstack, placer, pointed_thing)
+		print('on_placestart')
+		rpg_tool:tool_set(itemstack,placer)
+		return itemstack
+	end,
+	on_secondary_use = function(itemstack, user, pointed_thing)
+		print('on_placestart')
+		rpg_tool:tool_set(itemstack,user)
+		return itemstack
+	end,
 	tool_capabilities = {
 		full_punch_interval = 1.1,
 		max_drop_level=1,
