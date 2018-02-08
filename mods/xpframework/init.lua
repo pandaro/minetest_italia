@@ -4,6 +4,7 @@ xp.xp_hud = {}
 xp.level_hud = {}
 xp.custom_level_system = false
 xp.optDependencies={}
+xp.hud=false
 function xp.set_level_hud_text(player, str)
 	player:hud_change(xp.level_hud[player:get_player_name()], "text", str)
 end
@@ -25,6 +26,7 @@ function xp.get_xp(lvl, x)
 end
 
 function xp.updHudbars(player)
+	print(dump(player))
 	if xp.optDependencies["hudbars"] then 
 		hb.change_hudbar(player,'xp',xp.getXp(player),xp.lvl^(xp.getLvl(player)))
 		print(tostring(xp.getXp(player) ..' / '..xp.lvl^(xp.getLvl(player)+1)))
@@ -41,15 +43,9 @@ function xp.add_xp(player, num)
 	player:hud_change(xp.xp_hud[player:get_player_name()], "number", 20 * ((xp.getXp(player)) / (xp.lvl ^ xp.getLvl(player))))
 end
 
-function xp.add_xpPoints(player)
-	player:set_attribute('xpPoints',xp.getXpPoints(player) + 1)
-	
-
-end
-
 function xp.add_lvl(player)
 	player:set_attribute('lvl',xp.getLvl(player) + 1)
-	
+	player:set_attribute('xpPoints',xp.getXpPoints(player) + 1)
 	if not(xp.custom_level_system) then
 		player:hud_change(xp.level_hud[player:get_player_name()], "text", xp.getLvl(player))
 	end
@@ -62,12 +58,14 @@ function xp.optionalDependencies()
 		if value == "hudbars" then 
 			--print(true)
 			optionalDependencies["hudbars"]=true
+
 		end
 	end
 	xp.optDependencies = optionalDependencies
 end
 function xp.JoinPlayer()
 
+					
 	minetest.register_on_joinplayer(function(player)
 		if not player then
 			return
@@ -80,9 +78,12 @@ function xp.JoinPlayer()
 		end
 		
 		if xp.getXp(player) and xp.getLvl(player) then
-			
 			if xp.optDependencies["hudbars"] then
-				hb.register_hudbar("xp", 0xFFFFFF, ("xp"), { bar = "xp.png", icon = "xp_icon.png", bgicon = "xp_bg_icon.png" }, xp.getXp(player), xp.lvl^(xp.getLvl(player)+1), false)
+				if not xp.hud then
+					print('preparata')
+				hb.register_hudbar("xp", 0xFFFFFF, ("xp"), { bar = "xp.png", icon = "xp_icon.png", bgicon = "xp_bg_icon.png" }, 0, 10, false)
+				xp.hud=true
+				end
 				hb.init_hudbar(player, "xp", xp.getXp(player), nil)
 				print('hudbarsenabled')
 			else
@@ -111,6 +112,7 @@ end
 
 function xp.NewPlayer()
 	minetest.register_on_newplayer(function(ObjectRef)
+	print('registered')
 		ObjectRef:set_attribute('xp', 0)
 		ObjectRef:set_attribute('lvl', 1)
 		ObjectRef:set_attribute('xpPoints',1)
@@ -134,6 +136,7 @@ function xp.explorer_xp()
 				player = v
 			end
 		end
+		print('player explore ' .. tostring(player:get_player_name()))
 		xp.add_xp(player, 1)
 		xp.updHudbars(player)
 	end) 

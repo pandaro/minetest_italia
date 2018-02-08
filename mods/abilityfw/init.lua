@@ -1,45 +1,57 @@
 abilityfw={}
+dofile(minetest.get_modpath("abilityfw").."/abilities.lua")
+
+
 abilityfw.ability_list={
 	pick = 0,
 	sword = 0,
 	durability = 0,
 	tool = 0,
+	weaponspeed= 0,
+	tooldrop = 0,
+	jump = 0,
+	speed= 0 ,
+	gravity = 0,
 	
 }
 abilityfw.base=[[  
-size[10,10]
+size[12,12]
 bgcolor[#5A5A5A;false]
 label[0,0;XP points]
 
 label[1,1;ABILITY]
-label[1,3;Pick]
-label[1,4;Sword]
-label[1,5;Tool]
-label[1,6;Durability]
+
 
 label[0,1;CURRENT]
 
 label[3,1;ADD]
 
 
-button[3,2.5;1,1;pick;+]
-button[3,3.5;1,1;sword;+]
-button[3,4.5;1,1;tool;+]
-button[3,5.5;1,1;durability;+]
 
-background[0,3;1,1;aaa]
-background[0,4;1,1;aaa]
-background[0,5;1,1;aaa]
-background[0,6;1,1;aaa]
+
 ]]	
 
 minetest.register_on_newplayer(function(obj)
-	print(dump(obj))
+	--print(dump(obj))
+	obj:set_attribute('xpPoints',100)
 	for name, value in pairs( abilityfw.ability_list )do
 		obj:set_attribute(name,value)
+		print(tostring(name .. '' ..value))
+		
 	end
 
 print('join')
+end)
+minetest.register_on_joinplayer(function(obj)
+minetest.after(1, function(obj) 
+	abilityfw.jump(obj,nil)
+	abilityfw.speed(obj,nil)
+	abilityfw.gravity(obj,nil)
+end, obj)
+
+
+
+	obj:set_attribute('xpPoints',100)
 end)
 
 minetest.register_on_player_receive_fields(function(player, formname, fields)
@@ -55,6 +67,10 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 			player:set_attribute(name,player:get_attribute(name)+1)
 			player:set_attribute('xpPoints',player:get_attribute('xpPoints')-1)
 			print(tostring(player:get_attribute(name))) 
+			if abilityfw[name] then
+				
+				abilityfw[name](player,name)
+			end
 			
 		end
 		abilityfw.redraw(player)
@@ -63,13 +79,17 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 	end
 end)
 abilityfw.redraw = function(player)
-			player:set_attribute('ability_layout',abilityfw.base .. 
-				
-			'label[2,0;'..player:get_attribute('xpPoints')..']'..
-			'label[0,3;'..player:get_attribute('pick')..']'..
-			'label[0,4;'..player:get_attribute('sword')..']'..
-			'label[0,5;'..player:get_attribute('tool')..']'..
-			'label[0,6;'..player:get_attribute('durability')..']')
+			local abilities = abilityfw.base .. 'label[2,0;'..player:get_attribute('xpPoints')..']'
+			local posy = 3
+			for name,value in pairs(abilityfw.ability_list) do
+				abilities = abilities .. 'label[0,' .. posy ..';' .. player:get_attribute(name).. ']'
+				abilities = abilities .. 'label[1,' .. posy ..';' .. name.. ']'
+				abilities = abilities .. 'button[3,' .. posy ..';1,0.5;' .. name.. ';+]'
+				abilities = abilities .. 'background[0,' .. posy ..';1,0.5;' .. name.. ']'
+				posy = posy +1
+			end
+			player:set_attribute('ability_layout',abilities)
+
 end
 	
 minetest.register_node('abilityfw:table',{
