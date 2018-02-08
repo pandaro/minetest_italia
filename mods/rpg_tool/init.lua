@@ -90,6 +90,7 @@ minetest.register_tool("rpg_tool:1", {
 -- 	end,
 
 	tool_capabilities = {
+		full_punch_interval = 1,
 		max_drop_level=0,
 		groupcaps={
 			cracky={times={[2]=2.00, [3]=2.00}, uses=10, maxlevel=1}
