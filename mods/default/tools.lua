@@ -55,16 +55,6 @@ minetest.register_tool("default:pick_steel", {
 	inventory_image = "default_tool_steelpick.png",
 	palette='m.png',
 	_rpg = true,
-	on_place = function(itemstack, placer, pointed_thing)
-		print('on_placestart')
-		rpg_tool:tool_set(itemstack,placer)
-		return itemstack
-	end,
-	on_secondary_use = function(itemstack, user, pointed_thing)
-		print('on_placestart')
-		rpg_tool:tool_set(itemstack,user)
-		return itemstack
-	end,
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
@@ -81,16 +71,7 @@ minetest.register_tool("default:pick_bronze", {
 	inventory_image = "default_tool_bronzepick.png",
 	palette='m.png',
 	_rpg = true,
-	on_place = function(itemstack, placer, pointed_thing)
-		print('on_placestart')
-		rpg_tool:tool_set(itemstack,placer)
-		return itemstack
-	end,
-	on_secondary_use = function(itemstack, user, pointed_thing)
-		print('on_placestart')
-		rpg_tool:tool_set(itemstack,user)
-		return itemstack
-	end,	tool_capabilities = {
+	tool_capabilities = {
 	full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
@@ -106,16 +87,6 @@ minetest.register_tool("default:pick_mese", {
 	inventory_image = "default_tool_mesepick.png",
 	palette='m.png',
 	_rpg = true,
-	on_place = function(itemstack, placer, pointed_thing)
-		print('on_placestart')
-		rpg_tool:tool_set(itemstack,placer)
-		return itemstack
-	end,
-	on_secondary_use = function(itemstack, user, pointed_thing)
-		print('on_placestart')
-		rpg_tool:tool_set(itemstack,user)
-		return itemstack
-	end,
 	tool_capabilities = {
 		full_punch_interval = 0.9,
 		max_drop_level=3,
@@ -132,16 +103,6 @@ minetest.register_tool("default:pick_diamond", {
 	inventory_image = "default_tool_diamondpick.png",
 	palette='m.png',
 	_rpg = true,
-	on_place = function(itemstack, placer, pointed_thing)
-		print('on_placestart')
-		rpg_tool:tool_set(itemstack,placer)
-		return itemstack
-	end,
-	on_secondary_use = function(itemstack, user, pointed_thing)
-		print('on_placestart')
-		rpg_tool:tool_set(itemstack,user)
-		return itemstack
-	end,
 	tool_capabilities = {
 		full_punch_interval = 0.9,
 		max_drop_level=3,
@@ -194,16 +155,6 @@ minetest.register_tool("default:shovel_steel", {
 	wield_image = "default_tool_steelshovel.png^[transformR90",
 	palette='m.png',
 	_rpg = true,
-	on_place = function(itemstack, placer, pointed_thing)
-		print('on_placestart')
-		rpg_tool:tool_set(itemstack,placer)
-		return itemstack
-	end,
-	on_secondary_use = function(itemstack, user, pointed_thing)
-		print('on_placestart')
-		rpg_tool:tool_set(itemstack,user)
-		return itemstack
-	end,
 	tool_capabilities = {
 		full_punch_interval = 1.1,
 		max_drop_level=1,
@@ -219,6 +170,7 @@ minetest.register_tool("default:shovel_bronze", {
 	description = "Bronze Shovel",
 	inventory_image = "default_tool_bronzeshovel.png",
 	wield_image = "default_tool_bronzeshovel.png^[transformR90",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 1.1,
 		max_drop_level=1,
@@ -234,6 +186,7 @@ minetest.register_tool("default:shovel_mese", {
 	description = "Mese Shovel",
 	inventory_image = "default_tool_meseshovel.png",
 	wield_image = "default_tool_meseshovel.png^[transformR90",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=3,
@@ -249,6 +202,7 @@ minetest.register_tool("default:shovel_diamond", {
 	description = "Diamond Shovel",
 	inventory_image = "default_tool_diamondshovel.png",
 	wield_image = "default_tool_diamondshovel.png^[transformR90",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
@@ -296,6 +250,7 @@ minetest.register_tool("default:axe_stone", {
 minetest.register_tool("default:axe_steel", {
 	description = "Steel Axe",
 	inventory_image = "default_tool_steelaxe.png",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
@@ -310,6 +265,7 @@ minetest.register_tool("default:axe_steel", {
 minetest.register_tool("default:axe_bronze", {
 	description = "Bronze Axe",
 	inventory_image = "default_tool_bronzeaxe.png",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
@@ -324,6 +280,7 @@ minetest.register_tool("default:axe_bronze", {
 minetest.register_tool("default:axe_mese", {
 	description = "Mese Axe",
 	inventory_image = "default_tool_meseaxe.png",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 0.9,
 		max_drop_level=1,
@@ -338,6 +295,7 @@ minetest.register_tool("default:axe_mese", {
 minetest.register_tool("default:axe_diamond", {
 	description = "Diamond Axe",
 	inventory_image = "default_tool_diamondaxe.png",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 0.9,
 		max_drop_level=1,
@@ -385,6 +343,7 @@ minetest.register_tool("default:sword_stone", {
 minetest.register_tool("default:sword_steel", {
 	description = "Steel Sword",
 	inventory_image = "default_tool_steelsword.png",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 0.8,
 		max_drop_level=1,
@@ -399,6 +358,7 @@ minetest.register_tool("default:sword_steel", {
 minetest.register_tool("default:sword_bronze", {
 	description = "Bronze Sword",
 	inventory_image = "default_tool_bronzesword.png",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 0.8,
 		max_drop_level=1,
@@ -413,6 +373,7 @@ minetest.register_tool("default:sword_bronze", {
 minetest.register_tool("default:sword_mese", {
 	description = "Mese Sword",
 	inventory_image = "default_tool_mesesword.png",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 0.7,
 		max_drop_level=1,
@@ -427,6 +388,7 @@ minetest.register_tool("default:sword_mese", {
 minetest.register_tool("default:sword_diamond", {
 	description = "Diamond Sword",
 	inventory_image = "default_tool_diamondsword.png",
+	_rpg = true,
 	tool_capabilities = {
 		full_punch_interval = 0.7,
 		max_drop_level=1,
