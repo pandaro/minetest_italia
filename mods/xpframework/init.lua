@@ -144,7 +144,7 @@ end
 
 function xp.crafter_xp()
 	minetest.register_on_craft(function(itemstack, player)
-		local craft_xp = itemstack:get_definition().craft_xp
+		local crafter_xp = itemstack:get_definition().craft_xp
 		if craft_xp then
 			xp.add_xp(player, craft_xp)
 			xp.updHudbars(player)
